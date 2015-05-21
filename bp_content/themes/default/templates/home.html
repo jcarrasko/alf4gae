@@ -1,0 +1,85 @@
+{% extends base_layout %}
+
+{% block header_title_lead %}{% endblock %}
+
+{% block content %}
+
+<main class="bs-docs-featurette" id="content"
+	role="main">
+<div class="container">
+	<div
+		style="height: 500px; background: url(/{{ theme }}/img/tree_masthead.png) 50% 100% no-repeat;"></div>
+	<p class="bs-docs-featurette-title"">{% trans
+		%}Olé ! you have your Alfresco Cloud Boilerplate
+		for Google App Engine up & working.{% endtrans
+		%}</p>
+
+	<p class="lead">
+		<a href="https://github.com/jcarrasko/alf4gae"
+			class="btn btn-outline btn-lg"
+			onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 0.1');">{%
+			trans %}Download the Source Code{% endtrans %}</a>
+		<a
+			href="http://www.alfresco.com/products/cloud/signup"
+			class="btn btn-outline btn-lg"
+			onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download 0.1');">{%
+			trans %}Sign up in Alfresco{% endtrans %}</a>
+	</p>
+
+
+</div>
+</main>
+<div class="bs-docs-featurette">
+	<div class="container">
+		<h2 class="bs-docs-featurette-title">Create
+			easily a frontend for Alfresco cloud using
+			Google App Engine.</h2>
+		<p class="lead">This boilerplate makes easy
+			to design and develop Alfresco Cloud front-ends
+			on Google's App Engine. Using Python, jinga2,
+			and of course, Alfresco Cloud and Appengine.</p>
+
+		<hr class="half-rule">
+
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="/{{ theme }}/img/cloud-network.png"
+					alt="Sass and Less support"
+					class="img-responsive">
+				<h3>100 % Cloud</h3>
+				<p>With this boilerplate you can easily
+					build your 100% Cloud ECM App. Don't worry
+					about local deployments.</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="/{{ theme }}/img/devices.png"
+					alt="Responsive across devices"
+					class="img-responsive">
+				<h3>One framework, every device.</h3>
+				<p>This boilerplate is ideated for scaling
+					your websites and applications with a single
+					code base, from phones to tablets to desktops
+					with CSS media queries.</p>
+			</div>
+			<div class="col-sm-4">
+				<img src="/{{ theme }}/img/components.png"
+					alt="Components" class="img-responsive">
+				<h3>Easy, really easy</h3>
+				<p>With this boilerplate, you have all the
+					stuff for build easily your apps over Alfresco Cloud
+					in Appengine. You can choose a complete Fremium or Premium
+					Model.</p>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+
+{% endblock %}
+
+{% block mediaJS %}
+   
+{% endblock %}
+

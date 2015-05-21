@@ -1,0 +1,70 @@
+{% extends base_layout %}
+
+{% block header_title %}
+    {% trans %}Environment Information{% endtrans %}
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="alert">
+        <button class="close" data-dismiss="alert">×</button>
+        <strong>Warning!</strong> This page is only a sample,
+        for showing how to retrieve information from the repository.
+    </div>
+
+	
+ <div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav active"><a href="#A" data-toggle="tab">Repo Information</a></li>
+        <li class="nav"><a href="#B" data-toggle="tab">Session Information</a></li>
+        <li class="nav"><a href="#C" data-toggle="tab">User Information</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="A">
+       		<h3>Alfresco repo information</h3>
+    		<div class="tooltip-demo well">
+	    		<ul>
+	        		{% for repo in repository_info %}
+	        			<li><b>{{ repo }}:</b> {{ repository_info[repo] }}</li>
+	       			 {% endfor %}
+	   			 </ul>
+    		</div>
+       	</div>
+        <div class="tab-pane fade" id="B"><h3>Session information</h3>
+    		<div class="tooltip-demo well">
+		    <ul>
+		        {% for us in user_session %}
+		        <li><b>{{ us }}:</b> {{ user_session[us] }}</li>
+		        {% endfor %}
+		    </ul>
+		    <b>Session object:</b> {{ user_session_object }}
+		    </div>
+		</div>
+		<div class="tab-pane fade" id="C">
+			<h3>Alfresco User information</h3>
+		    <div class="tooltip-demo well">
+			    <ul>
+			        <li><b>user_id:</b> {{ user_info.key }}</li>
+			        <li><b>created:</b> {{ user_info.created }}</li>
+			        <li><b>updated:</b> {{ user_info.updated }}</li>
+			        <li><b>username:</b> {{ user_info.username }}</li>
+			        <li><b>name:</b> {{ user_info.name }}</li>
+			        <li><b>last name:</b> {{ user_info.last_name }}</li>
+			        <li><b>country:</b> {{ user_info.country }}</li>
+			        <li><b>email:</b> {{ user_info.email }}</li>
+			        <li><b>IP:</b> {{ user_info.ip }}</li>
+			        <li><b>Password:</b> {{ user_info.password }}</li>
+			    </ul>
+			    <b>User object:</b> {{ user_info_object }}
+		    </div>
+		</div>
+	</div>
+</div>
+
+ 
+<p><a href="{{ logout_url }}" class="btn btn-primary">{% trans %}Logout{% endtrans %}</a></p>
+
+{% endblock %}

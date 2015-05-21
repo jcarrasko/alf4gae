@@ -1,0 +1,11 @@
+/__init__.pyc
+/basehandler.pyc
+/captcha.pyc
+/decorators.pyc
+/error_handler.pyc
+/i18n.pyc
+/jinja_bootstrap.pyc
+/oauth2.pyc
+/test_helpers.pyc
+/tests.pyc
+/utils.pyc
