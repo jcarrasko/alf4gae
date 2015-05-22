@@ -1,4 +1,4 @@
-[Alfresco - Google App Engine Boilerplate]
+[Alfresco Cloud - Google App Engine Boilerplate]
 ==============================
 
 This boilerplate lets you to develop rapid user interfaces deployed in Google App Engine and that uses Alfresco Cloud like backend for ECM purposes.
@@ -33,11 +33,10 @@ Technical info:
 + Code written following the [Google Python Style Guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html)
 + Unit testing with [unittest](http://docs.python.org/library/unittest.html), [webtest](http://webtest.pythonpaste.org/en/latest/index.html), [pyquery](http://packages.python.org/pyquery/)
 + OpenID library provided by Google App Engine
-+ OAuth2 for federated login providers that do not support OpenID
 + [HTML5Boilerplate](http://html5boilerplate.com/)
 + [Modernizr 2.6.1](http://modernizr.com)
 + [jQuery 1.8.2](http://jquery.com)
-+ [Twitter Bootstrap 2.2.1](http://twitter.github.com/bootstrap/) Template for Desktop Version.
++ [Twitter Bootstrap 3](http://twitter.github.com/bootstrap/) Template for Desktop Version.
 
 
 
@@ -66,12 +65,7 @@ Get started in just a few easy steps
 Please note that your custom application code **should be located in the bp_content folder within your own theme**.
 The intention is that separating the boilerplate code from your application code will avoid merge conflicts as you keep up with future boilerplate changes.
 
-
-
-Resources
----------
-Boilerplate has a Google group ([gae-boilerplate](https://groups.google.com/forum/?fromgroups#!forum/gae-boilerplate)) for discussions and a Twitter account ([@gaeboilerplate](http://twitter.com/gaeboilerplate/)) for sharing related resources.
-
+ 
 Open Source
 -----------
 If you want to add, fix or improve something, create an [issue](https://github.com/jcarrasko/alf4gae/issues) or send a [Pull Request](https://github.com/jcarrasko/alf4gae/pull/new/master).
@@ -138,7 +132,7 @@ msgid is the text in English.  msgstr is the translation to the language indicat
 
 <tt>msgid "Change your password"</tt>
 
-<tt>msgstr "Cambiar tu contraseña"</tt>
+<tt>msgstr "Cambiar tu contrase��a"</tt>
 
 **Requirements**
 + Install before pip with distribute_setup.py (Read the environment setup document)
@@ -191,7 +185,7 @@ Adding or updating text to be translated or adding new languages requires more w
    In each locale/<locale code>/LC_MESSAGES directory there is a file messages.po.  Users translate the strings in these files.
    msgid is the text in English.  msgstr is the translation to the language indicated by the locale code.  For example:
    + `msgid "Change your password"`
-   + `msgstr "Cambiar tu contraseña"`
+   + `msgstr "Cambiar tu contrase��a"`
 1. Compile translations
    Run: <tt>pybabel compile -f -d ./locale</tt>
 
